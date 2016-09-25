@@ -1,0 +1,13 @@
+{
+  "name": "acme_assignments_angular",
+  "version": "1.0.0",
+  "description": "weekend assignment 7",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tom Trasmontero",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {}
+}
