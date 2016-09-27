@@ -17,6 +17,5 @@ angular.module('salesAngular')
 			})
 
 			$urlRouterProvider.otherwise('/');
-
 	});
 
