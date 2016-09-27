@@ -1,0 +1,31 @@
+
+<data-region-status></data-region-status>
+
+<div class='well' ng-controller='salesPeopleCtrl'>
+	<input class='form-control' placeholder="Sales Person Name" ng-model='name'/>
+	<br>
+	<button ng-disabled='!name' class='btn btn-primary' ng-click='create()'>
+	Create Sales Person
+	</button>
+</div>
+
+<div class='well'>
+	<ul class='list-group' ng-controller='salesPeopleCtrl'>
+		<li class='list-group-item' ng-repeat='person in salesPeople'>
+			{{person.name}}
+			<button class='btn btn-danger pull-right' ng-click='destroy(person)'>Delete
+			</button>
+			<br clear='all'>
+				
+				<ul class='list-group' style='margin-top: 10px' ng-controller='regionsCtrl'>
+					<li class='list-group-item' ng-class="{'list-group-item-success': check(salesRegions,person.id,region.id)}"  ng-repeat='region in regions'>
+						<a ng-click='findOrDelete(salesRegions,person.id,region.id)'>
+						{{region.zip}}
+						</a>
+					</li>	
+					<br clear='all'>
+				</ul>	
+		</li>
+	</ul>
+</div>
+

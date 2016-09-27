@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Acme_Angular</title>
+	<link rel='stylesheet' href='/bootstrap/dist/css/bootstrap.min.css' />
+	<script src='angular/angular.js'></script>
+	<script src='angular-ui-router/release/angular-ui-router.js'></script>
+	<script src='/app.js'></script>
+	<script src='/regions/regions.controller.js'></script>
+	<script src='/regions/regions.factory.js'></script>
+	<script src='/salesPeople/salesPeople.factory.js'></script>
+	<script src='/salesPeople/salesPeople.controller.js'></script>
+	<script src='/salesPeopleRegion/salesPeopleRegion.factory.js'></script>
+	<script src='/salesPeopleRegion/salesPeopleRegion.directive.js'></script>
+	
+
+</head>
+<body ng-app='salesAngular'>
+	<div class='container'>
+	<h1>Acme Sales Angular</h1>
+		<ul class='nav nav-tabs'>
+			<li ui-sref-active='active'><a ui-sref='home'>Home</a></li>
+			<li ui-sref-active='active'><a ui-sref='regions'>Regions</a></li>
+			<li ui-sref-active='active'><a ui-sref='salesPeople'>SalesPeople</a></li>
+		</ul>
+	</div>	
+
+	<div class='container'>
+	<ui-view></ui-view>
+	</div>
+</body>
+</html>

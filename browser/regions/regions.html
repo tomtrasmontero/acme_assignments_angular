@@ -1,0 +1,18 @@
+
+<data-region-status></data-region-status>
+<div class='well' ng-controller='regionsCtrl'>
+	<input class='form-control' placeholder='region zip' ng-model='zipcode'/>
+	<br>
+	<button ng-disabled='!zipcode' class='btn btn-primary' ng-click='create()'>Create a Region</button>
+</div>
+
+<div class='container'>
+	<ul class='list-group' ng-controller='regionsCtrl'>
+		<li class='list-group-item' ng-repeat='region in regions'>
+			{{region.zip}}
+			<button class='btn btn-danger pull-right' ng-click='destroy(region)'>Delete
+			</button>
+			<br clear='all'>
+		</li>
+	</ul>
+</div>
