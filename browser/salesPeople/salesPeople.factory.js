@@ -4,6 +4,10 @@ angular.module('salesAngular')
 		var salesPeople = [];
 
 		return{
+			getStatus: function(){
+				return salesPeople;
+			},
+
 			create: function(name){
 				return $http.post('/salesPerson', name)
 				.then(function(result){

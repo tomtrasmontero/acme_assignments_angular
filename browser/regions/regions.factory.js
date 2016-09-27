@@ -4,6 +4,10 @@ angular.module('salesAngular')
 		var regions = [];
 
 		return{
+			getStatus: function(){
+				return regions;
+			},
+
 			create: function(zip){
 				return $http.post('/regions', zip)
 				.then(function(result){

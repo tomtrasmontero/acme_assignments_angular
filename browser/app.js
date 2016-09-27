@@ -9,7 +9,7 @@ angular.module('salesAngular')
 			})
 			.state('regions', {
 				url: '/regions',
-				templateUrl: '/regions/regions.html'
+				templateUrl: '/regions/regions.html',
 			})
 			.state('salesPeople', {
 				url: '/salesPeople',
