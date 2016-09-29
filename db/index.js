@@ -28,7 +28,7 @@ SalesPerson.hasMany(SalesPersonRegion);
 
 //sync func to pass to server.js
 var sync = function(){
-	return db.sync({});
+	return db.sync({force: true});
 };
 
 module.exports = {
