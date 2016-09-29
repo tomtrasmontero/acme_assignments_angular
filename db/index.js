@@ -8,7 +8,6 @@ db.authenticate().then(function(result){
 	console.log('db connection is a go!!');
 });
 
-
 var Region = db.define('region', {
 	zip: {
 		type: Sequelize.INTEGER

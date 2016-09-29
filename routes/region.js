@@ -28,6 +28,11 @@ router.delete('/:id',function(req,res,next){
 		where: {id: req.params.id}
 	})
 	.then(function(){
+		SalesPersonRegion.destroy({
+			where: {regionId: null}
+		})
+	})
+	.then(function(){
 		console.log('region destroyed');
 		res.sendStatus(200);
 	})

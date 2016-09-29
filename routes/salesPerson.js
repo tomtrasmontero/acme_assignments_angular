@@ -1,6 +1,6 @@
 var router = require('express').Router();
 var SalesPerson = require('../db').models.SalesPerson;
-
+var SalesPersonRegion = require('../db').models.SalesPersonRegion;
 
 module.exports = router;
 
@@ -26,6 +26,11 @@ router.post('/', function(req,res,next){
 router.delete('/:id', function(req,res,next){
 	SalesPerson.destroy({
 		where: {id: req.params.id}
+	})
+	.then(function(){
+		SalesPersonRegion.destroy({
+			where: {salesPersonId: null}
+		})
 	})
 	.then(function(result){
 		console.log('sales person destroyed');
